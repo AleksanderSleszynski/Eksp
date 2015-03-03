@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Eksperymentowo</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="dry_ice">Suchy lód</string>
+    <string name="balloons">Balony</string>
+    <string name="polymer">Polimery</string>
+</resources>
