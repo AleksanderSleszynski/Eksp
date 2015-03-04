@@ -1,11 +1,14 @@
 package com.example.julian.eksperymentowo;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -14,6 +17,12 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // LAYOUT DECLARATION
+
+        final LinearLayout l_i = (LinearLayout) findViewById(R.id.l_i);
+        final LinearLayout l_b = (LinearLayout) findViewById(R.id.l_b);
+        final LinearLayout l_p = (LinearLayout) findViewById(R.id.l_p);
 
         //BUTTONS DECLARATION
 
@@ -25,38 +34,30 @@ public class MainActivity extends ActionBarActivity {
         final Button b_i_4 = (Button) findViewById(R.id.b_i_4);
         final Button b_i_5 = (Button) findViewById(R.id.b_i_5);
 
-        final boolean[] visible_b_i = {false};
-
         // BALLOONS
         final Button b_m_2 = (Button) findViewById(R.id.b_m_2);
         final Button b_b_1 = (Button) findViewById(R.id.b_b_1);
         final Button b_b_2 = (Button) findViewById(R.id.b_b_2);
-
-        final boolean[] visible_b_b = {false};
 
         // POLYMER
         final Button b_m_3 = (Button) findViewById(R.id.b_m_3);
         final Button b_p_1 = (Button) findViewById(R.id.b_p_1);
         final Button b_p_2 = (Button) findViewById(R.id.b_p_2);
 
+        //BOOLEAN DECLARATION
+        final boolean[] visible_b_i = {false};
+        final boolean[] visible_b_b = {false};
         final boolean[] visible_b_p = {false};
+
 
         b_m_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(visible_b_i[0] == false) {
-                    b_i_1.setVisibility(View.VISIBLE);
-                    b_i_2.setVisibility(View.VISIBLE);
-                    b_i_3.setVisibility(View.VISIBLE);
-                    b_i_4.setVisibility(View.VISIBLE);
-                    b_i_5.setVisibility(View.VISIBLE);
+            if(visible_b_i[0] == false) {
+                    l_i.setVisibility(View.VISIBLE);
                     visible_b_i[0] = true;
                 } else {
-                    b_i_1.setVisibility(View.GONE);
-                    b_i_2.setVisibility(View.GONE);
-                    b_i_3.setVisibility(View.GONE);
-                    b_i_4.setVisibility(View.GONE);
-                    b_i_5.setVisibility(View.GONE);
+                    l_i.setVisibility(View.GONE);
                     visible_b_i[0] = false;
                 }
             }
@@ -65,35 +66,35 @@ public class MainActivity extends ActionBarActivity {
         b_i_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //TODO: Intent to new activity
             }
         });
 
         b_i_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //TODO: Intent to new activity
             }
         });
 
         b_i_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //TODO: Intent to new activity
             }
         });
 
         b_i_4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //TODO: Intent to new activity
             }
         });
 
         b_i_5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //TODO: Intent to new activity
             }
         });
 
@@ -101,14 +102,11 @@ public class MainActivity extends ActionBarActivity {
         b_m_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if(visible_b_b[0] == false) {
-                    b_b_1.setVisibility(View.VISIBLE);
-                    b_b_2.setVisibility(View.VISIBLE);
+                    l_b.setVisibility(View.VISIBLE);
                     visible_b_b[0] = true;
                 } else {
-                    b_b_1.setVisibility(View.GONE);
-                    b_b_2.setVisibility(View.GONE);
+                    l_b.setVisibility(View.GONE);
                     visible_b_b[0] = false;
                 }
             }
@@ -117,14 +115,14 @@ public class MainActivity extends ActionBarActivity {
         b_b_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //TODO: Intent to new activity
             }
         });
 
         b_b_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //TODO: Intent to new activity
             }
         });
 
@@ -132,12 +130,10 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 if(visible_b_p[0] == false) {
-                    b_p_1.setVisibility(View.VISIBLE);
-                    b_p_2.setVisibility(View.VISIBLE);
+                    l_p.setVisibility(View.VISIBLE);
                     visible_b_p[0] = true;
                 } else {
-                    b_p_1.setVisibility(View.GONE);
-                    b_p_2.setVisibility(View.GONE);
+                    l_p.setVisibility(View.GONE);
                     visible_b_p[0] = false;
                 }
             }
@@ -146,14 +142,14 @@ public class MainActivity extends ActionBarActivity {
         b_p_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //TODO: Intent to new activity
             }
         });
 
         b_p_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //TODO: Intent to new activity
             }
         });
     }

@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".dry_ice_1"
+            android:label="@string/dry_ice_1" >
+        </activity>
     </application>
 
 </manifest>

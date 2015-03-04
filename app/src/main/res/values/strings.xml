@@ -2,7 +2,7 @@
     <string name="app_name">Eksperymentowo</string>
 
     <string name="action_settings">Settings</string>
-
+                <!-- Main Activity -->
                 <!-- SUCHY LÓD-->
     <string name="dry_ice">Suchy lód</string>
     <string name="dry_ice_1">Zlewki i Kolby</string>
@@ -20,4 +20,8 @@
     <string name="polymer">Polimery</string>
     <string name="polymer_1">Sztuczny śnieg</string>
     <string name="polymer_2">Żel</string>
+
+                <!-- DRY ICE 1 -->
+    <string name="hello_world">Hello world!</string>
+
 </resources>
