@@ -3,7 +3,21 @@
 
     <string name="action_settings">Settings</string>
 
+                <!-- SUCHY LÓD-->
     <string name="dry_ice">Suchy lód</string>
+    <string name="dry_ice_1">Zlewki i Kolby</string>
+    <string name="dry_ice_2">Strzelające kaplse</string>
+    <string name="dry_ice_3">Czarodziejska kula</string>
+    <string name="dry_ice_4">Lodowe bańki</string>
+    <string name="dry_ice_5">Napełniamy balony</string>
+
+                <!-- BALONY -->
     <string name="balloons">Balony</string>
+    <string name="balloons_1">Szaszłyk</string>
+    <string name="balloons_2">Zapalniczka</string>
+
+                <!--POLIMERY-->
     <string name="polymer">Polimery</string>
+    <string name="polymer_1">Sztuczny śnieg</string>
+    <string name="polymer_2">Żel</string>
 </resources>

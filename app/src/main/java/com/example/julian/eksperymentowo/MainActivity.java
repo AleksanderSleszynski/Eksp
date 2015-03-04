@@ -15,24 +15,142 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //BUTTONS DECLARATION
+
+        // DRY ICE
         final Button b_m_1 = (Button) findViewById(R.id.b_m_1);
+        final Button b_i_1 = (Button) findViewById(R.id.b_i_1);
+        final Button b_i_2 = (Button) findViewById(R.id.b_i_2);
+        final Button b_i_3 = (Button) findViewById(R.id.b_i_3);
+        final Button b_i_4 = (Button) findViewById(R.id.b_i_4);
+        final Button b_i_5 = (Button) findViewById(R.id.b_i_5);
+
+        final boolean[] visible_b_i = {false};
+
+        // BALLOONS
+        final Button b_m_2 = (Button) findViewById(R.id.b_m_2);
+        final Button b_b_1 = (Button) findViewById(R.id.b_b_1);
+        final Button b_b_2 = (Button) findViewById(R.id.b_b_2);
+
+        final boolean[] visible_b_b = {false};
+
+        // POLYMER
+        final Button b_m_3 = (Button) findViewById(R.id.b_m_3);
+        final Button b_p_1 = (Button) findViewById(R.id.b_p_1);
+        final Button b_p_2 = (Button) findViewById(R.id.b_p_2);
+
+        final boolean[] visible_b_p = {false};
+
         b_m_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(visible_b_i[0] == false) {
+                    b_i_1.setVisibility(View.VISIBLE);
+                    b_i_2.setVisibility(View.VISIBLE);
+                    b_i_3.setVisibility(View.VISIBLE);
+                    b_i_4.setVisibility(View.VISIBLE);
+                    b_i_5.setVisibility(View.VISIBLE);
+                    visible_b_i[0] = true;
+                } else {
+                    b_i_1.setVisibility(View.GONE);
+                    b_i_2.setVisibility(View.GONE);
+                    b_i_3.setVisibility(View.GONE);
+                    b_i_4.setVisibility(View.GONE);
+                    b_i_5.setVisibility(View.GONE);
+                    visible_b_i[0] = false;
+                }
+            }
+        });
+
+        b_i_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
             }
         });
 
-        final Button b_m_2 = (Button) findViewById(R.id.b_m_2);
+        b_i_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        b_i_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        b_i_4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        b_i_5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
         b_m_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                if(visible_b_b[0] == false) {
+                    b_b_1.setVisibility(View.VISIBLE);
+                    b_b_2.setVisibility(View.VISIBLE);
+                    visible_b_b[0] = true;
+                } else {
+                    b_b_1.setVisibility(View.GONE);
+                    b_b_2.setVisibility(View.GONE);
+                    visible_b_b[0] = false;
+                }
             }
         });
 
-        final Button b_m_3 = (Button) findViewById(R.id.b_m_3);
+        b_b_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        b_b_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
         b_m_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(visible_b_p[0] == false) {
+                    b_p_1.setVisibility(View.VISIBLE);
+                    b_p_2.setVisibility(View.VISIBLE);
+                    visible_b_p[0] = true;
+                } else {
+                    b_p_1.setVisibility(View.GONE);
+                    b_p_2.setVisibility(View.GONE);
+                    visible_b_p[0] = false;
+                }
+            }
+        });
+
+        b_p_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        b_p_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

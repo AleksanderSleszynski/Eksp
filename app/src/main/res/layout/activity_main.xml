@@ -13,25 +13,127 @@
         android:id="@+id/b_m_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#33B5E5"
+        android:background="#0099CC"
         android:text="@string/dry_ice" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        >
+
+        <Button
+            android:id="@+id/b_i_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#33B5E5"
+            android:text="@string/dry_ice_1"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/b_i_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#33B5E5"
+            android:text="@string/dry_ice_2"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/b_i_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#33B5E5"
+            android:text="@string/dry_ice_3"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/b_i_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#33B5E5"
+            android:text="@string/dry_ice_4"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/b_i_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#33B5E5"
+            android:text="@string/dry_ice_5"
+            android:visibility="gone"/>
+
+    </LinearLayout>
 
 
     <Button
         android:id="@+id/b_m_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#AA66CC"
+        android:background="#9933CC"
         android:text="@string/balloons"
-        android:layout_below="@id/b_m_1"/>
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        >
+
+        <Button
+            android:id="@+id/b_b_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#AA66CC"
+            android:text="@string/balloons_1"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/b_b_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#AA66CC"
+            android:text="@string/balloons_2"
+            android:visibility="gone"/>
+
+
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/b_m_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFBB33"
+        android:background="#FF8800"
         android:text="@string/polymer"
-        android:layout_below="@id/b_m_2"/>
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        >
+
+        <Button
+            android:id="@+id/b_p_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFBB33"
+            android:text="@string/polymer_1"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/b_p_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFBB33"
+            android:text="@string/polymer_2"
+            android:visibility="gone"/>
+
+
+
+    </LinearLayout>
 
 
 
