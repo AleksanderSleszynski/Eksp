@@ -21,7 +21,16 @@
     <string name="polymer_1">Sztuczny śnieg</string>
     <string name="polymer_2">Żel</string>
 
-                <!-- DRY ICE 1 -->
-    <string name="hello_world">Hello world!</string>
+                <!-- EKSPERYMENT ACTIVITY -->
+    <string name="need">Co potrzebne ?</string>
+    <string name="how_done">Jak zrobić ?</string>
+    <string name="how_lead">Jak prowadzić ?</string>
+
+                <!-- ZLEWKI I KOLBY -->
+    <string name="dry_ice_1_n_1">Kolby i Zlewki</string>
+    <string name="dry_ice_1_n_2">Barwniki spożywcze</string>
+    <string name="dry_ice_1_n_3">Kilka kostek suchego lodu</string>
+    <string name="dry_ice_1_n_4">Gorocą Woda</string>
+
 
 </resources>

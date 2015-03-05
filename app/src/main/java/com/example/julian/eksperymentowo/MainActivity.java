@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
@@ -49,6 +50,9 @@ public class MainActivity extends ActionBarActivity {
         final boolean[] visible_b_b = {false};
         final boolean[] visible_b_p = {false};
 
+        final ImageView logo = (ImageView) findViewById(R.id.logo);
+        float logoTransparency = 0.6f;
+        logo.setAlpha(logoTransparency);
 
         b_m_1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +71,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 //TODO: Intent to new activity
+                sendMessage(v);
             }
         });
 
@@ -152,8 +157,9 @@ public class MainActivity extends ActionBarActivity {
                 //TODO: Intent to new activity
             }
         });
-    }
 
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -175,5 +181,10 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void sendMessage(View view) {
+        Intent intent = new Intent(MainActivity.this, dry_ice_1.class);
+        startActivity(intent);
     }
 }
