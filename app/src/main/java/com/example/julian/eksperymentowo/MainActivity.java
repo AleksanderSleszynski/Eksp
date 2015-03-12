@@ -1,163 +1,171 @@
 package com.example.julian.eksperymentowo;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 
 public class MainActivity extends ActionBarActivity {
 
-    @Override
+    RecyclerView mRecyclerView;
+    RecyclerView.LayoutManager mLayoutManager;
+    RecyclerView.Adapter mAdapter;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_recycler_view);
+        mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        mRecyclerView.setHasFixedSize(true);
 
-        // LAYOUT DECLARATION
-
-        final LinearLayout l_i = (LinearLayout) findViewById(R.id.l_i);
-        final LinearLayout l_b = (LinearLayout) findViewById(R.id.l_b);
-        final LinearLayout l_p = (LinearLayout) findViewById(R.id.l_p);
-
-        //BUTTONS DECLARATION
-
-        // DRY ICE
-        final Button b_m_1 = (Button) findViewById(R.id.b_m_1);
-        final Button b_i_1 = (Button) findViewById(R.id.b_i_1);
-        final Button b_i_2 = (Button) findViewById(R.id.b_i_2);
-        final Button b_i_3 = (Button) findViewById(R.id.b_i_3);
-        final Button b_i_4 = (Button) findViewById(R.id.b_i_4);
-        final Button b_i_5 = (Button) findViewById(R.id.b_i_5);
-
-        // BALLOONS
-        final Button b_m_2 = (Button) findViewById(R.id.b_m_2);
-        final Button b_b_1 = (Button) findViewById(R.id.b_b_1);
-        final Button b_b_2 = (Button) findViewById(R.id.b_b_2);
-
-        // POLYMER
-        final Button b_m_3 = (Button) findViewById(R.id.b_m_3);
-        final Button b_p_1 = (Button) findViewById(R.id.b_p_1);
-        final Button b_p_2 = (Button) findViewById(R.id.b_p_2);
-
-        //BOOLEAN DECLARATION
-        final boolean[] visible_b_i = {false};
-        final boolean[] visible_b_b = {false};
-        final boolean[] visible_b_p = {false};
-
-        final ImageView logo = (ImageView) findViewById(R.id.logo);
-        float logoTransparency = 0.6f;
-        logo.setAlpha(logoTransparency);
-
-        b_m_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            if(visible_b_i[0] == false) {
-                    l_i.setVisibility(View.VISIBLE);
-                    visible_b_i[0] = true;
-                } else {
-                    l_i.setVisibility(View.GONE);
-                    visible_b_i[0] = false;
-                }
-            }
-        });
-
-        b_i_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //TODO: Intent to new activity
-                sendMessage(v);
-            }
-        });
-
-        b_i_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //TODO: Intent to new activity
-            }
-        });
-
-        b_i_3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //TODO: Intent to new activity
-            }
-        });
-
-        b_i_4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //TODO: Intent to new activity
-            }
-        });
-
-        b_i_5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //TODO: Intent to new activity
-            }
-        });
+        mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
 
 
-        b_m_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(visible_b_b[0] == false) {
-                    l_b.setVisibility(View.VISIBLE);
-                    visible_b_b[0] = true;
-                } else {
-                    l_b.setVisibility(View.GONE);
-                    visible_b_b[0] = false;
-                }
-            }
-        });
+        mAdapter = new CardAdapter();
+        mRecyclerView.setAdapter(mAdapter);
 
-        b_b_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //TODO: Intent to new activity
-            }
-        });
-
-        b_b_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //TODO: Intent to new activity
-            }
-        });
-
-        b_m_3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(visible_b_p[0] == false) {
-                    l_p.setVisibility(View.VISIBLE);
-                    visible_b_p[0] = true;
-                } else {
-                    l_p.setVisibility(View.GONE);
-                    visible_b_p[0] = false;
-                }
-            }
-        });
-
-        b_p_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //TODO: Intent to new activity
-            }
-        });
-
-        b_p_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //TODO: Intent to new activity
-            }
-        });
-
+//
+//        // LAYOUT DECLARATION
+//
+//        final LinearLayout l_i = (LinearLayout) findViewById(R.id.l_i);
+//        final LinearLayout l_b = (LinearLayout) findViewById(R.id.l_b);
+//        final LinearLayout l_p = (LinearLayout) findViewById(R.id.l_p);
+//
+//        //BUTTONS DECLARATION
+//
+//        // DRY ICE
+//        final Button b_m_1 = (Button) findViewById(R.id.b_m_1);
+//        final Button b_i_1 = (Button) findViewById(R.id.b_i_1);
+//        final Button b_i_2 = (Button) findViewById(R.id.b_i_2);
+//        final Button b_i_3 = (Button) findViewById(R.id.b_i_3);
+//        final Button b_i_4 = (Button) findViewById(R.id.b_i_4);
+//        final Button b_i_5 = (Button) findViewById(R.id.b_i_5);
+//
+//        // BALLOONS
+//        final Button b_m_2 = (Button) findViewById(R.id.b_m_2);
+//        final Button b_b_1 = (Button) findViewById(R.id.b_b_1);
+//        final Button b_b_2 = (Button) findViewById(R.id.b_b_2);
+//
+//        // POLYMER
+//        final Button b_m_3 = (Button) findViewById(R.id.b_m_3);
+//        final Button b_p_1 = (Button) findViewById(R.id.b_p_1);
+//        final Button b_p_2 = (Button) findViewById(R.id.b_p_2);
+//
+//        //BOOLEAN DECLARATION
+//        final boolean[] visible_b_i = {false};
+//        final boolean[] visible_b_b = {false};
+//        final boolean[] visible_b_p = {false};
+//
+//        final ImageView logo = (ImageView) findViewById(R.id.logo);
+//        float logoTransparency = 0.6f;
+//        logo.setAlpha(logoTransparency);
+//
+//        b_m_1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//            if(visible_b_i[0] == false) {
+//                    l_i.setVisibility(View.VISIBLE);
+//                    visible_b_i[0] = true;
+//                } else {
+//                    l_i.setVisibility(View.GONE);
+//                    visible_b_i[0] = false;
+//                }
+//            }
+//        });
+//
+//        b_i_1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //TODO: Intent to new activity
+//                sendMessage(v);
+//            }
+//        });
+//
+//        b_i_2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //TODO: Intent to new activity
+//            }
+//        });
+//
+//        b_i_3.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //TODO: Intent to new activity
+//            }
+//        });
+//
+//        b_i_4.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //TODO: Intent to new activity
+//            }
+//        });
+//
+//        b_i_5.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //TODO: Intent to new activity
+//            }
+//        });
+//
+//
+//        b_m_2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(visible_b_b[0] == false) {
+//                    l_b.setVisibility(View.VISIBLE);
+//                    visible_b_b[0] = true;
+//                } else {
+//                    l_b.setVisibility(View.GONE);
+//                    visible_b_b[0] = false;
+//                }
+//            }
+//        });
+//
+//        b_b_1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //TODO: Intent to new activity
+//            }
+//        });
+//
+//        b_b_2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //TODO: Intent to new activity
+//            }
+//        });
+//
+//        b_m_3.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(visible_b_p[0] == false) {
+//                    l_p.setVisibility(View.VISIBLE);
+//                    visible_b_p[0] = true;
+//                } else {
+//                    l_p.setVisibility(View.GONE);
+//                    visible_b_p[0] = false;
+//                }
+//            }
+//        });
+//
+//        b_p_1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //TODO: Intent to new activity
+//            }
+//        });
+//
+//        b_p_2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //TODO: Intent to new activity
+//            }
+//        });
 
     }
 
@@ -181,10 +189,5 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void sendMessage(View view) {
-        Intent intent = new Intent(MainActivity.this, dry_ice_1.class);
-        startActivity(intent);
     }
 }
