@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".dry_ice_1"
+            android:name=".Experiment"
             android:label="@string/dry_ice_1" >
         </activity>
     </application>
