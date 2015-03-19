@@ -1,0 +1,79 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.example.julian.eksperymentowo.Experiment">
+
+        <ImageView
+           android:id="@+id/dry_ice_1_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dry_ice_1_img"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"/>
+
+        <Button
+            android:id="@+id/dry_ice_1_b_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dry_ice_1_img"
+            android:text="@string/need"
+            android:background="#669900"/>
+        <LinearLayout
+            android:id="@+id/dry_ice_1_l_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dry_ice_1_b_1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dry_ice_1_n_1"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dry_ice_1_n_2"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dry_ice_1_n_3"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dry_ice_1_n_4"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/dry_ice_1_b_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dry_ice_1_l_1"
+            android:text="@string/how_done"
+            android:background="#FF8800"/>
+
+
+        <Button
+            android:id="@+id/dry_ice_1_b_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dry_ice_1_b_2"
+            android:text="@string/how_lead"
+            android:background="#CC0000"/>
+
+
+    </RelativeLayout>
+</ScrollView>
