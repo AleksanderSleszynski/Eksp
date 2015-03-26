@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.julian.eksperymentowo.ExperimentList">
+
+    <ImageView
+       android:id="@+id/experiment_list_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dry_ice_kolby_i_zlewki_img"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"/>
+
+    <TextView
+        android:id="@+id/text_view_experiment_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/experiment_list_img"
+        android:text="@string/dry_ice_1_n_1"
+        android:textColor="#000"
+        android:gravity="center"
+        android:background="#BDBDBD"
+        android:alpha="0.8"
+        android:textSize="24sp"
+        android:padding="5dp"/>
+
+    <ListView
+        android:id="@+id/list_view_experiment_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/experiment_list_img">
+
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/button_experiment_list_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:text="@string/how_done"
+            android:background="#FF8800"/>
+
+        <Button
+            android:id="@+id/button_experiment_list_lead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/how_lead"
+            android:layout_weight="50"
+            android:background="#CC0000"/>
+
+    </LinearLayout>
+
+ </RelativeLayout>

@@ -31,6 +31,10 @@
     <string name="dry_ice_1_n_2">Barwniki spożywcze</string>
     <string name="dry_ice_1_n_3">Kilka kostek suchego lodu</string>
     <string name="dry_ice_1_n_4">Gorocą Woda</string>
+    <string name="title_activity_experiment">Experiment</string>
+    <string name="hello_world">Hello world!</string>
+
+
 
 
 </resources>
