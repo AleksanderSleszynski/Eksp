@@ -3,12 +3,12 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Image -->
     <ImageView
         android:id="@+id/item_icon"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="8dp"
-        android:src="@drawable/eksperymentowo_logo_kwadrat"
         android:scaleType="fitXY"
         />
 
@@ -20,10 +20,9 @@
         android:textStyle="bold"
         android:layout_alignBottom="@id/item_icon"
         android:gravity="center"
-        android:background="#BDBDBD"
+        android:background="@color/grey"
         android:textSize="18sp"
         android:alpha="0.8"
-        android:textColor="#000"
-        android:text="jakis tekst"/>
+        android:textColor="#000"/>
 
 </RelativeLayout>

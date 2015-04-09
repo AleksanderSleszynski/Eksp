@@ -19,9 +19,9 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/experiment_list_img"
         android:text="@string/dry_ice_1_n_1"
-        android:textColor="#000"
+        android:textColor="@color/text_color"
         android:gravity="center"
-        android:background="#BDBDBD"
+        android:background="@color/grey"
         android:alpha="0.8"
         android:textSize="24sp"
         android:padding="5dp"/>
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="50"
             android:text="@string/how_done"
-            android:background="#FF8800"/>
+            android:background="#FF9800"/>
 
         <Button
             android:id="@+id/button_experiment_list_lead"
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:text="@string/how_lead"
             android:layout_weight="50"
-            android:background="#CC0000"/>
+            android:background="#F44336"/>
 
     </LinearLayout>
 

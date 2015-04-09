@@ -23,6 +23,8 @@ public class Experiment extends ActionBarActivity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
+        //TODO: Make two fragment activity
+        //TODO: Create list of items
     }
 
 

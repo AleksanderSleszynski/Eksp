@@ -10,9 +10,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by julian on 19.03.15.
- */
 public class MyAdapter extends ArrayAdapter<Model> {
 
     private final Context context;
@@ -29,10 +26,8 @@ public class MyAdapter extends ArrayAdapter<Model> {
     @Override
     public View getView(int postion, View convertView, ViewGroup parent){
 
-        //Create Inflater TODO: Co to jest ?
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        // Get rowView from inflater TODO: Co to jest rowView ?
         View rowView = null;
         if(!modelsArrayList.get(postion).isGroupHeader()){
             rowView = inflater.inflate(R.layout.target_item, parent, false);

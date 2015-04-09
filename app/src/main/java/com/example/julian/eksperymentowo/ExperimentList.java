@@ -6,7 +6,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 
 public class ExperimentList extends ActionBarActivity {
@@ -16,11 +20,21 @@ public class ExperimentList extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_experiment_list);
 
+        final ListView listView = (ListView)findViewById(R.id.list_view_experiment_list);
+        String[] values = new String[] { "Kolby",
+                "Zlewki",
+                "Gorąca woda",
+                "Suchy Lód",
+                "Barwniki"
+        };
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.experiment_list_item,R.id.experiment_list_item, values);
+        listView.setAdapter(adapter);
+
         Button b1 = (Button) findViewById(R.id.button_experiment_list_done);
         Button b2 = (Button) findViewById(R.id.button_experiment_list_lead);
 
         final Intent i = new Intent(this, Experiment.class);
-
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

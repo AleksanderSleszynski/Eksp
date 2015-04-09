@@ -1,8 +1,5 @@
 package com.example.julian.eksperymentowo;
 
-/**
- * Created by julian on 19.03.15.
- */
 public class Model {
 
     private int icon;
@@ -20,6 +17,7 @@ public class Model {
         this.icon = icon;
         this.title = title;
     }
+
 
     public int getIcon() {
         return icon;
